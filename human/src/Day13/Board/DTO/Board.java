@@ -3,7 +3,9 @@ package Day13.Board.DTO;
 import java.util.Date;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor		// 기본생성자
 @Data
 public class Board {
 	
@@ -14,4 +16,10 @@ public class Board {
 	private Date regDate;
 	private Date updDate;
 
+	
+	public Board( String title, String writer, String content) {
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+	}
 }
